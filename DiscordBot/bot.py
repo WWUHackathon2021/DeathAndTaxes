@@ -1,11 +1,15 @@
 # bot.py
 import os
-
 import discord
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+
+import importlib.util
+spec = importlib.util.spec_from_file_location("bees", "commands/bee_movie.py")
+bee_movie = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(bee_movie)
 
 client = discord.Client()
 
@@ -30,5 +34,8 @@ async def on_message(message):
     if message.content == '!pizzathehut':
         response = "nobody. outpizzas. the hut."
         await message.channel.send(response)
+
+    if message.content == '!bees':
+        await bee_movie.bees(message)
 
 client.run(TOKEN)
