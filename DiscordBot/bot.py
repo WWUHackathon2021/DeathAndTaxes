@@ -26,4 +26,9 @@ async def on_message(message):
         response = "testing testing 1 2 3"
         await message.channel.send(response)
 
+    #test2
+    if message.content == '!pizzathehut':
+        response = "nobody. outpizzas. the hut."
+        await message.channel.send(response)
+
 client.run(TOKEN)
