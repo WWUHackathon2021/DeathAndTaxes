@@ -11,6 +11,10 @@ spec = importlib.util.spec_from_file_location("bees", "commands/bee_movie.py")
 bee_movie = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(bee_movie)
 
+test = importlib.util.spec_from_file_location("ball", "commands/magic_8_ball.py")
+magic = importlib.util.module_from_spec(test)
+test.loader.exec_module(magic)
+
 client = discord.Client()
 
 @client.event
@@ -30,10 +34,8 @@ async def on_message(message):
         response = "testing testing 1 2 3"
         await message.channel.send(response)
 
-    #test2
-    if message.content == '!pizzathehut':
-        response = "nobody. outpizzas. the hut."
-        await message.channel.send(response)
+    if message.content.partition(' ')[0] == '!8ball':
+        await magic.ball(message)
 
     if message.content == '!bees':
         await bee_movie.bees(message)
