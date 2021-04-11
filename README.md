@@ -9,4 +9,10 @@ Commands:
 
 !8ball - provides a helpful answer to a yes or no question.
 
-!bees - prints the bee movie script.
+bees - prints the bee movie script.
+
+there/they're/their - provides a helpful grammar tip
+
+!uwumode - toggles bot responses in english/uwu
+
+!uwu - translates a sentence into uwu
