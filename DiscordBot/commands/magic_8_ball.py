@@ -3,7 +3,7 @@ import random
 
 async def ball(message):
 
-    ### EASTER EGGS ###
+    ### Easter eggs ###
     if "out-pizza" in message.content.lower() or "outpizza" in message.content.lower():
         response = "Nobody. Out-pizzas. The Hut."
         await message.channel.send(response)
@@ -18,8 +18,7 @@ async def ball(message):
         response = "Yes"
         await message.channel.send(response)
 
-    ### Maybes ###
+    ### General responses ###
     else:
-        responses = ['meh...', 'fuck if I know', 'no shit Sherlock', 'Is that a real question?', 'Survey Says: Fuck You', 'You know I think they teach that in like 3rd grade', 'In the words of Søren Aabye Kierkegaard, philosopher and father of existential humanism: Shut up and leave me alone', 'Absofuckinglutely', 'When hell freezes over', 'Idk I can\'t check right now, my wifi is out']
-        '', '', '',
-        await message.channel.send(responses[random.randint(0,9)])
+        responses = ['meh...', 'fuck if I know', 'no shit Sherlock', 'Is that a real question?', 'Survey Says: Fuck You', 'You know I think they teach that in like 3rd grade', 'In the words of Søren Aabye Kierkegaard, philosopher and father of existential humanism: Shut up and leave me alone', 'Absofuckinglutely', 'When hell freezes over', 'Idk I can\'t check right now, my wifi is out', 'Oh hell yeah', 'I mean I think so but I heard it from this guy who won\'t shut up about the moon landings so take that with a grain of salt', 'One sec I\'m taking a hit', 'Sure, one sec.\nHey Siri!\nSome dumbass wants to know ' + message.content.split(' ', 1)[1] + '\nApparently the answer is no']
+        await message.channel.send(responses[random.randint(0,13)])
