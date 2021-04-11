@@ -29,7 +29,7 @@ async def on_ready():
 
 thieyreChecker = ["There", "Their", "They're"] 
 thieyreList = ["Sorry dumbass, I think you meant ""their're"".", "Sorry shitter, I think you meant ""theyre   '"".", "Sorry dogwater sage main, I think you meant ""thiare"".", 
-"ACTUALLY?! It's PRONOUNCED ""thir""."]
+"ACTUALLY?! It's PRONOUNCED ""thir"".", "aha i think u meant tere", "uwu u silly its theri"]
 
 
 #RESPOND TO MESSAGES HERE
