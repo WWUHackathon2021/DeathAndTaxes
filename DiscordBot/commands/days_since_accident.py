@@ -34,4 +34,4 @@ async def accident(message):
 
     if message.content.partition(' ')[0] == '!check':
         pos = trackedMessages.index(content)
-        await message.channel.send("It has been " + time_string + " since " + content + ". good luck warrior, Something about this is telling me you can break this habit :).")
+        await message.channel.send("It has been " + time_string + " since " + content + ". Wow, you'd think this would have been reset by now, huh.")

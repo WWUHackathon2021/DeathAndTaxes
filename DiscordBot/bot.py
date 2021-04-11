@@ -44,6 +44,8 @@ thieyreChecker = ["there", "their", "they're"]
 thieyreList = ["Sorry dumbass, I think you meant ""their're"".", "Sorry shitter, I think you meant ""theyre   '"".", "Sorry dogwater sage main, I think you meant ""thiare"".",
 "ACTUALLY?! It's PRONOUNCED ""thir"".", "aha i think u meant tere", "uwu u silly its theri"]
 
+yourChecker = ["your", "you're"]
+yourList = ["The correct and only way to write that is yu're actually =-=", "Please change that to yor please :)"]
 
 #RESPOND TO MESSAGES HERE
 @client.event
@@ -75,6 +77,12 @@ async def on_message(message):
         if content in message.content.lower():
             pick = random.randint(0,4)
             response = thieyreList[pick]
+            await out.respond(message, response)
+
+    for stuff in yourChecker:
+        if stuff in message.content.lower():
+            pick = random.randint(0,1)
+            response = yourList[pick]
             await out.respond(message, response)
 
 client.run(TOKEN)
