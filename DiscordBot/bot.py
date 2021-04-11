@@ -55,7 +55,7 @@ async def on_message(message):
 
     for content in thieyreChecker:
         if content.lower() in message.content:
-            pick = random.randint(0,3)
+            pick = random.randint(0,4)
             response = thieyreList[pick]
             await message.channel.send(response)
 
