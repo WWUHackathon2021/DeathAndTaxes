@@ -21,14 +21,13 @@ spec = importlib.util.spec_from_file_location("csgo", "commands/counterstrike.py
 play = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(play)
 
+spec = importlib.util.spec_from_file_location("accident", "commands/days_since_accident.py")
+days = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(days)
+
 spec = importlib.util.spec_from_file_location("uwu", "commands/uwu.py")
 out = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(out)
-
-doc = importlib.util.spec_from_file_location("accident", "commands/days_since_accident.py")
-days = importlib.util.module_from_spec(doc)
-doc.loader.exec_module(days)
-
 
 client = discord.Client()
 global uwumode
@@ -39,6 +38,7 @@ async def on_ready():
     out.init()
     magic.init()
     bee_movie.init()
+    days.init()
 
 thieyreChecker = ["there", "their", "they're"]
 thieyreList = ["Sorry dumbass, I think you meant ""their're"".", "Sorry shitter, I think you meant ""theyre   '"".", "Sorry dogwater sage main, I think you meant ""thiare"".",
@@ -70,6 +70,7 @@ async def on_message(message):
         await out.toggleUwuMode(message, True)
         await magic.toggleUwuMode(message)
         await bee_movie.toggleUwuMode(message)
+        await days.toggleUwuMode(message)
     elif "bees" in message.content.lower():
         await bee_movie.bees(message)
 
