@@ -1,8 +1,0 @@
-{
-“name”: “death-and-taxes”,
-“version”: “1.0.0”,
-“description”: “Discord Bot, WWU Hackathon 2021 Projecy”,
-“main”: “bot.js”,
-“author”: “Shane Baden, Kyle Hansen, Chandra Lim, Augustus Lull, Daniel Wilson”,
-“dependencies”: {}
-}
