@@ -63,7 +63,7 @@ async def on_message(message):
     elif message.content.partition(' ')[0] == '!csgo':
         await play.csgo(message)
     elif message.content.partition(' ')[0] == '!uwu':
-        await out.uwu(message)
+        await out.uwuCommand(message)
     elif message.content.partition(' ')[0] == '!uwumode':
         await out.toggleUwuMode(message, True)
         await magic.toggleUwuMode(message)

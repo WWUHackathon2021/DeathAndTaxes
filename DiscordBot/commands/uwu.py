@@ -5,7 +5,7 @@ def init():
     global uwumode
     uwumode = False
 
-async def uwu(message):
+async def uwuCommand(message):
     response = (message.content+' ').split(' ', 1)[1]
     response = uwu(response)
     await message.channel.send(response)
