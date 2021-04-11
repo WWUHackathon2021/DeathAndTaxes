@@ -32,7 +32,7 @@ thieyreList = ["Sorry dumbass, I think you meant ""their're"".", "Sorry shitter,
 "ACTUALLY?! It's PRONOUNCED ""thir""."]
 
 
-#RESPOND TO MASSAGES HERE
+#RESPOND TO MESSAGES HERE
 @client.event
 async def on_message(message):
     #prevents bot from responding to self
@@ -50,7 +50,7 @@ async def on_message(message):
     if message.content.partition(' ')[0] == '!track' or message.content.partition(' ')[0] == '!reset' or message.content.partition(' ')[0] == '!check':
         await days.accident(message)
 
-    if message.content == '!bees':
+    if "bees" in message.content.lower():
         await bee_movie.bees(message)
 
     for content in thieyreChecker:
