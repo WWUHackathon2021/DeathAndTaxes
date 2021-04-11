@@ -22,7 +22,7 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
 
-#RESPOND TO MASSAGES HERE
+#RESPOND TO MESSAGES HERE
 @client.event
 async def on_message(message):
     #prevents bot from responding to self
@@ -37,7 +37,7 @@ async def on_message(message):
     if message.content.partition(' ')[0] == '!8ball':
         await magic.ball(message)
 
-    if message.content == '!bees':
+    if "bees" in message.content.lower():
         await bee_movie.bees(message)
 
 client.run(TOKEN)
